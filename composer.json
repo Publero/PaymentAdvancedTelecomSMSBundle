@@ -1,0 +1,42 @@
+{
+    "name": "publero/payment-advanced-telecom-sms-bundle",
+    "type": "symfony-bundle",
+    "description": "AdvancedTelecom SMS payment gateway for symfony2.",
+    "keywords": ["SMS", "Payment"],
+    "homepage": "http://publero.github.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Martin Hlaváč",
+            "email": "info@mhlavac.net",
+            "homepage": "http://www.mhlavac.net/"
+        },
+        {
+            "name": "Publero s.r.o. developers",
+            "homepage": "https://www.publero.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": ">=2.0.0",
+        "symfony/yaml": ">=2.0.0",
+        "doctrine/doctrine-bundle": ">=1.0.0",
+        "stof/doctrine-extensions-bundle": ">=1.1.x-dev",
+        "publero/test": "dev-master"
+    },
+    "suggest": {
+        "ext-soap": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Publero\\PaymentAdvancedTelecomSMSBundle": ""
+        }
+    },
+    "target-dir": "Publero\PaymentAdvancedTelecomSMSBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    }
+}

@@ -1,0 +1,35 @@
+start_payment_result:
+    subcode:
+        0: Unspecified error.
+        2: SERVICEID is not valid.
+        3: SERVICEID is not valid.
+        11: ORDERID is not valid.
+        12: Duplicate ORDERID.
+        13: ORDERID out of range
+        21: AMOUNT is not valid, is not double.
+        23: AMOUT is out of range.
+        31: Currency is not valid; i.e. it isn’t „CZK“
+        41: DESCRIPTION is not valid.
+        43: DESCRIPTION is out of range.
+        51: TARGET is not valid.
+        61: SIGNATURE is not valid.
+        71: BACKURL is not valid.
+        81: CHANNEL is not valid, must be ‘WEB’ or ‘WAP’
+        91: PHONENUMBER is not valid.
+        101: OPERATOR is not valid.
+        102: OPERATOR test cannot be used on production server. # Watch out as this subcode is not mentioned in official documentation!
+        unkown: Unkown error
+    code:
+        ok: Creating new payment is accepted.
+
+transaction_status_result.code:
+    0: Unspecified error. ONGOING status.,
+    1: The payment has been accepted. FINAL status.,
+    2: The payment has been cancelled. It may happen several ways - one of them being customer’s cancellation request. Also lack of credit can cause transaction to be cancelled. Some customers are banned from mobile payments by the mobile operators. FINAL status.,
+    3: The transaction is considered expired. FINAL status.,
+    4: Correct payment request has been received and MP Port page has been displayed to the customer. ONGOING status.,
+    5: The customer has been redirected to an operator’s system. ONGOING status.,
+    301: Invalid SERVICEID.,
+    302: Invalid ORDERID.,
+    303: Authorization signature is not valid.
+    unkown: Unkown error.

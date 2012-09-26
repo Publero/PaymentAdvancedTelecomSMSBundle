@@ -1,0 +1,22 @@
+parameters:
+    publero_advanced_telecom_sms.manager.class: Publero\AdvancedTelecomSMSBundle\Entity\PaymentManager
+    publero_advanced_telecom_sms.signer.class: Publero\AdvancedTelecomSMSBundle\Signer\ArraySigner
+    publero_advanced_telecom_sms.connector.soap.class: Publero\AdvancedTelecomSMSBundle\Connector\SoapConnector
+    publero_advanced_telecom_sms.soap_client.class: SoapClient
+
+services:
+    publero_advanced_telecom_sms.manager:
+        class: %publero_advanced_telecom_sms.manager.class%
+        arguments: [ "@doctrine.orm.entity_manager" , "@publero_advanced_telecom_sms.connector.soap" ]
+
+    publero_advanced_telecom_sms.signer:
+        class: %publero_advanced_telecom_sms.signer.class%
+        arguments: [ %publero_advanced_telecom_sms.password% ]
+
+    publero_advanced_telecom_sms.connector.soap:
+        class : %publero_advanced_telecom_sms.connector.soap.class%
+        arguments: [ %publero_advanced_telecom_sms.service_id%, @publero_advanced_telecom_sms.soap_client, @publero_advanced_telecom_sms.signer ]
+
+    publero_advanced_telecom_sms.soap_client:
+        class: %publero_advanced_telecom_sms.soap_client.class%
+        arguments: [ %publero_advanced_telecom_sms.wsdl% ]

@@ -1,0 +1,18 @@
+test:
+    http:
+        url: 'http://test.mpport.cz/mp/'
+        wsdl: 'http://test.mpport.cz/soap/?class=MPPortService&wsdl'
+        port: 80
+    https:
+        url: 'https://test.mpport.cz/mp/'
+        wsdl: 'https://test.mpport.cz/soap/?class=MPPortService&wsdl'
+        port: 4443
+production:
+    http:
+        url: 'http://payments.mpport.cz/mp/'
+        wsdl: 'http://payments.mpport.cz/soap/?class=MPPortService&wsdl'
+        port: 80
+    https:
+        url: 'https://payments.mpport.cz/mp/'
+        wsdl: 'https://payments.mpport.cz/soap/?class=MPPortService&wsdl'
+        port: 443
